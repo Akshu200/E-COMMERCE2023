@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, "./client/build")));
 
 //rest api
 app.use("*", function (req, res) {
-  req.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 //PORT
